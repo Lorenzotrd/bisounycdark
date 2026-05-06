@@ -1315,7 +1315,9 @@ footer {
   .menu-page,
   .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
 
-  .page-hero { padding-top: 7rem; padding-bottom: 2.5rem; }
+  .page-hero { padding-top: 7rem; padding-bottom: 1rem; }
+  .events-page { padding-top: 1.5rem; }
+  .events-hero-image { min-height: 220px; margin-bottom: 3rem; }
   .page-hero .section-label { font-size: 1.3rem; }
   .page-hero h1 {
     font-size: clamp(1.9rem, 8vw, 2.6rem);
