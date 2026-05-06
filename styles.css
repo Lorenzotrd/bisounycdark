@@ -86,33 +86,40 @@ nav.solid {
   display: none;
   background: transparent;
   border: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   cursor: pointer;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
+  position: relative;
+  z-index: 101;
 }
 
 .nav-toggle span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
-  width: 24px;
+  width: 26px;
   height: 2px;
   background: var(--midnight);
-  transition: transform 0.3s ease, opacity 0.2s ease;
   border-radius: 2px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.2s ease, top 0.3s ease;
 }
 
+.nav-toggle span:nth-child(1) { top: calc(50% - 7px); }
+.nav-toggle span:nth-child(3) { top: calc(50% + 7px); }
+
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .nav-links a {
