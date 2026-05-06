@@ -161,6 +161,7 @@ nav.solid .nav-cta:hover {
 /* ============ HERO ============ */
 .hero {
   height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1284,7 +1285,7 @@ footer {
     color: white !important;
   }
 
-  .hero-content { padding: 0 1.5rem 4rem; }
+  .hero-content { padding: 0 1.5rem 7rem; }
 
   section.story,
   section.menu-teaser,
