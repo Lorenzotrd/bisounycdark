@@ -30,21 +30,41 @@ if (navToggle && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 }
 
-// Reveal on scroll
-const observer = new IntersectionObserver((entries) => {
+// Reveal on scroll — gentle fade + lift, runs once per element
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(40px)';
-  el.style.transition = 'opacity 1s ease, transform 1s ease';
-  observer.observe(el);
+const revealSelectors = [
+  'section.story',
+  'section.menu-teaser',
+  'section.events-teaser',
+  'section.reservation',
+  'section.contact',
+  '.events-hero-image',
+  '.event-type',
+  '.menu-section',
+  '.cat',
+  '.story-stats > div'
+];
+
+document.querySelectorAll(revealSelectors.join(',')).forEach((el, i) => {
+  if (prefersReducedMotion) {
+    el.classList.add('is-visible');
+    return;
+  }
+  el.classList.add('reveal-on-scroll');
+  // small stagger for siblings of the same parent
+  const idx = Array.from(el.parentElement?.children || []).indexOf(el);
+  el.style.transitionDelay = `${Math.min(idx, 4) * 80}ms`;
+  revealObserver.observe(el);
 });
 
 // Menu page tab filter (smooth scroll to section)
@@ -58,14 +78,6 @@ document.querySelectorAll('.menu-tab').forEach(tab => {
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-});
-
-// Story / teaser sections reveal
-document.querySelectorAll('section.story, section.menu-teaser, section.events-teaser, section.contact').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(40px)';
-  el.style.transition = 'opacity 1s ease, transform 1s ease';
-  observer.observe(el);
 });
 
 // Resy widget — replace these with values from your Resy partner dashboard
