@@ -33,7 +33,7 @@
 <meta name="twitter:description" content="French kiss, New York edge. Natural wine bar in Soho. Open until late.">
 <meta name="twitter:image" content="https://bisounyc.com/og-image.jpg">
 
-<!-- LocalBusiness Schema for Google + AI search (GEO) -->
+<!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,198 +82,269 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
-<body>
+<body class="home-dark">
+
+<!-- LOADER -->
+<div class="bisou-loader" id="bisouLoader" role="status" aria-label="Loading Bisou">
+  <img src="images/kiss.png" alt="" class="bisou-loader-mark" aria-hidden="true">
+</div>
 
 <!-- NAV -->
-<nav id="nav" class="solid" aria-label="Main navigation">
+<nav id="nav" class="dark" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Bisou home"><img src="images/logo.png" alt="Bisou — A Wine Bar"></a>
   <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="primary-nav">
-    <li><a href="#story">Story</a></li>
+    <li><a href="#story">Home</a></li>
     <li><a href="menu.html">Menu</a></li>
-    <li><a href="events.html">Private Events</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="#reservation">Reservations</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="nav-cta" data-resy>Book a Table</a></li>
   </ul>
+  <div class="nav-right">
+    <a href="https://www.instagram.com/bisoubarnyc/" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+    </a>
+    <a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="nav-cta nav-cta-outline" data-resy>Book a table</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero" role="banner">
+<!-- HERO with carousel arrows -->
+<header class="hero hero-dark" role="banner">
   <img class="hero-video" src="images/hero.jpg" alt="Bisou Wine Bar storefront at 112 6th Ave, NY" loading="eager">
   <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <span class="hero-eyebrow">not your typical wine bar in soho</span>
-    <h1>French <em>kiss,</em><br>New York <em>edge</em></h1>
-    <div class="hero-meta">
-      <div class="meta-row">
-        <span class="meta-label">Tonight</span>
-        <span class="meta-value">Open till Late</span>
-      </div>
-      <a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="btn btn-light" data-resy>Reserve a Table</a>
-    </div>
-  </div>
+  <button class="hero-arrow hero-arrow-left" aria-label="Previous">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hero-arrow hero-arrow-right" aria-label="Next">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
 
+  <div class="hero-content hero-content-center">
+    <span class="hero-eyebrow hero-eyebrow-italic">Exclusive wine bar</span>
+    <h1>French <em>kiss,</em> New York <em>edge</em></h1>
+    <a href="#story" class="btn btn-outline-light">View more</a>
+  </div>
 </header>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Natural wines</span>
-    <span>Late-night bites</span>
-    <span>Soho, NYC</span>
-    <span>French kiss, NY edge</span>
-    <span>Unapologetically red</span>
-    <span>Natural wines</span>
-    <span>Late-night bites</span>
-    <span>Soho, NYC</span>
-    <span>French kiss, NY edge</span>
-    <span>Unapologetically red</span>
-  </div>
-</div>
-
-<main>
-
-<!-- STORY -->
-<section class="story" id="story" aria-labelledby="story-title">
-  <div class="story-image" role="img" aria-label="Bisou wine bar interior"></div>
-  <div class="story-text">
-    <span class="section-label">our story</span>
-    <h2 class="section-title" id="story-title">Not your <em>typical</em><br>wine bar</h2>
-    <p class="lead">A little bit Paris, a little bit downtown New York, and entirely its own thing.</p>
-    <p>Bisou is where the bottle gets passed around, the music gets louder past midnight, and nobody asks if the natural wine is "too funky." It is. That's the point.</p>
-    <p>Tucked into a quiet corner of Soho, we pour small-grower bottles, plate honest food, and keep the lights low enough to actually flirt.</p>
-    <div class="story-stats">
-      <div>
-        <div class="stat-num">120+</div>
-        <div class="stat-label">Bottles by glass</div>
-      </div>
-      <div>
-        <div class="stat-num">'21</div>
-        <div class="stat-label">Open since</div>
-      </div>
-      <div>
-        <div class="stat-num">2am</div>
-        <div class="stat-label">Last pour</div>
-      </div>
+<!-- BOOKING STRIP -->
+<section class="booking-strip" aria-label="Reserve a table">
+  <div class="booking-strip-inner">
+    <div class="booking-field">
+      <span class="booking-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </span>
+      <select class="booking-select" aria-label="Number of guests">
+        <option>2 People</option>
+        <option>1 Person</option>
+        <option>3 People</option>
+        <option>4 People</option>
+        <option>5 People</option>
+        <option>6 People</option>
+        <option>7+ People</option>
+      </select>
     </div>
+    <div class="booking-field">
+      <span class="booking-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </span>
+      <input type="date" class="booking-input" aria-label="Reservation date">
+    </div>
+    <div class="booking-field">
+      <span class="booking-icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </span>
+      <select class="booking-select" aria-label="Time">
+        <option>7:00 pm</option>
+        <option>5:30 pm</option>
+        <option>6:00 pm</option>
+        <option>6:30 pm</option>
+        <option>7:30 pm</option>
+        <option>8:00 pm</option>
+        <option>8:30 pm</option>
+        <option>9:00 pm</option>
+        <option>10:00 pm</option>
+      </select>
+    </div>
+    <a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="booking-submit" data-resy>Book a Table</a>
+  </div>
+  <p class="booking-credit">Powered by Resy</p>
+</section>
+
+<!-- HOURS / IMAGE / HAPPY HOUR -->
+<section class="trio" id="story" aria-labelledby="story-title">
+  <div class="trio-inner">
+
+    <div class="trio-col">
+      <span class="section-label">visit a bar</span>
+      <h2 class="trio-title" id="story-title">Open hours</h2>
+      <div class="trio-hours">
+        <div class="trio-hours-row">
+          <span class="trio-day">Tuesday – Thursday :</span>
+          <span class="trio-time">5:00 pm – midnight</span>
+        </div>
+        <div class="trio-hours-row">
+          <span class="trio-day">Friday – Saturday :</span>
+          <span class="trio-time">5:00 pm – 2:00 am</span>
+        </div>
+        <div class="trio-hours-row">
+          <span class="trio-day">Sunday :</span>
+          <span class="trio-time">5:00 pm – 11:00 pm</span>
+        </div>
+      </div>
+      <a href="#contact" class="trio-link">Visit Us</a>
+    </div>
+
+    <div class="trio-image" role="img" aria-label="Inside Bisou wine bar"></div>
+
+    <div class="trio-col">
+      <span class="section-label">the best offer</span>
+      <h2 class="trio-title">Happy hour</h2>
+      <div class="trio-hours">
+        <div class="trio-hours-row trio-hours-row-center">
+          <span class="trio-day">Tuesday – Thursday</span>
+          <span class="trio-time">5:00 pm – 7:00 pm</span>
+        </div>
+        <div class="trio-offer">20% off natural wine by the glass</div>
+        <div class="trio-offer">15% off all bottles under $80</div>
+        <div class="trio-offer">$8 daily bites & oysters</div>
+        <div class="trio-offer">10% off all spirits</div>
+      </div>
+      <a href="menu.html" class="trio-link">View more</a>
+    </div>
+
   </div>
 </section>
 
-<!-- MENU TEASER (light bg) -->
-<section class="menu-teaser" id="menu-teaser" aria-labelledby="menu-title">
-  <div class="menu-teaser-inner">
-    <div class="menu-teaser-text">
-      <span class="section-label">on the list</span>
-      <h2 class="section-title" id="menu-title">The <em>menu</em></h2>
-      <p class="lead">120+ bottles by the glass. Honest plates. A list that changes with what's growing, what's drinking well, and what we couldn't stop ordering.</p>
-      <div class="menu-teaser-cats">
-        <div class="cat"><span class="cat-num">01</span><span class="cat-name">Bites & Plates</span></div>
-        <div class="cat"><span class="cat-num">02</span><span class="cat-name">Wine — Rouge, Blanc, Rosé</span></div>
-        <div class="cat"><span class="cat-num">03</span><span class="cat-name">Pet Nat & Champagne</span></div>
-      </div>
-      <a href="menu.html" class="btn btn-light">See the full menu</a>
-    </div>
-    <div class="menu-teaser-image" role="img" aria-label="Wine and bites at Bisou"></div>
+<!-- WIDE IMAGE BANNER -->
+<section class="wide-banner" aria-hidden="true">
+  <div class="wide-banner-inner"></div>
+</section>
+
+<!-- WE RECOMMEND -->
+<section class="recommend" aria-labelledby="recommend-title">
+  <div class="recommend-head">
+    <span class="section-label">this week's specials</span>
+    <h2 class="recommend-title" id="recommend-title">We recommend</h2>
+    <p class="recommend-sub">A short list of bottles and bites we couldn't stop pouring this week. Small growers, honest plates, low markups.</p>
+  </div>
+
+  <div class="recommend-grid">
+    <ul class="recommend-list">
+      <li>
+        <div class="recommend-row">
+          <span class="recommend-name">Domaine Texier <em>Beaujolais</em></span>
+          <span class="recommend-dot"></span>
+          <span class="recommend-price">$16</span>
+        </div>
+        <p class="recommend-desc">Gamay, juicy red fruit, low intervention</p>
+      </li>
+      <li>
+        <div class="recommend-row">
+          <span class="recommend-name">Lambrusco <em>frizzante</em></span>
+          <span class="recommend-dot"></span>
+          <span class="recommend-price">$14</span>
+        </div>
+        <p class="recommend-desc">Chilled, fizzy, dangerous after one bottle</p>
+      </li>
+      <li>
+        <div class="recommend-row">
+          <span class="recommend-name">Cacio e <em>Pepe</em></span>
+          <span class="recommend-dot"></span>
+          <span class="recommend-price">$22</span>
+        </div>
+        <p class="recommend-desc">Tonnarelli, pecorino, black pepper, butter</p>
+      </li>
+      <li>
+        <div class="recommend-row">
+          <span class="recommend-name">Steak <em>tartare</em></span>
+          <span class="recommend-dot"></span>
+          <span class="recommend-price">$24</span>
+        </div>
+        <p class="recommend-desc">Hand cut, capers, shallot, sourdough crisp</p>
+      </li>
+    </ul>
+    <a href="menu.html" class="btn btn-outline-light recommend-cta">View More</a>
+
+    <div class="recommend-image" role="img" aria-label="Bartender pouring at Bisou"></div>
   </div>
 </section>
 
-<!-- EVENTS TEASER -->
-<section class="events-teaser" id="events" aria-labelledby="events-title">
-  <img src="images/dj.png" alt="" aria-hidden="true" class="events-teaser-dj">
-  <div class="events-teaser-inner">
-    <div class="events-teaser-image" role="img" aria-label="Private event at Bisou"></div>
-    <div class="events-teaser-text">
-      <span class="section-label">private events</span>
-      <h2 class="section-title" id="events-title">Throw the <em>party</em><br>they'll talk about</h2>
-      <p class="lead">Birthdays, launches, the kind of dinner that turns into something else.</p>
-      <p>Take over the back room or the entire bar. We curate the wine list, you curate the guest list. From intimate ten-tops to full buyouts for sixty.</p>
-      <a href="events.html" class="btn">Plan your event</a>
+<!-- PROMO / MAP / PROMO -->
+<section class="promo-row" aria-label="Promotions and location">
+  <a href="events.html" class="promo-card promo-card-events" aria-label="Private events at Bisou">
+    <div class="promo-card-content">
+      <h3>Private events</h3>
+      <span class="promo-card-link">Learn more</span>
     </div>
-  </div>
+  </a>
+
+  <a href="https://www.google.com/maps/place/Bisou/data=!4m2!3m1!1s0x0:0x963770b010f868d4" target="_blank" rel="noopener" class="promo-map" aria-label="Open Bisou location in Google Maps">
+    <iframe
+      class="promo-map-embed"
+      src="https://www.google.com/maps?q=Bisou+112+6th+Ave+New+York+NY+10013&z=15&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Map showing Bisou at 112 6th Ave, NY"></iframe>
+  </a>
+
+  <a href="#reservation" class="promo-card promo-card-promo" aria-label="Happy hour at Bisou">
+    <div class="promo-card-content">
+      <h3>Happy hour</h3>
+      <span class="promo-card-link">Learn more</span>
+    </div>
+  </a>
 </section>
 
-<!-- RESERVATION -->
-<section class="reservation" id="reservation" aria-labelledby="reservation-title">
-  <span class="section-label" style="color: var(--warm-ivory);">book a table</span>
+<!-- RESERVATION CTA -->
+<section class="reservation reservation-dark" id="reservation" aria-labelledby="reservation-title">
+  <span class="section-label">book a table</span>
   <h2 id="reservation-title">Come <em>kiss</em> the night<br>goodbye.</h2>
   <p>Reservations open three weeks out. Walk-ins welcome at the bar — first come, first poured.</p>
   <div class="resy-buttons">
-    <a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="btn btn-light" data-resy>Reserve on Resy</a>
-    <a href="tel:+12125550100" class="btn btn-ghost">Call (212) 555-0100</a>
+    <a href="https://resy.com/cities/new-york-ny/venues/bisou" target="_blank" rel="noopener" class="btn" data-resy>Reserve on Resy</a>
+    <a href="tel:+12125550100" class="btn btn-ghost-light">Call (212) 555-0100</a>
   </div>
 </section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact" aria-labelledby="contact-title">
-  <div class="contact-grid">
-    <div>
-      <span class="section-label">find us</span>
-      <h2 class="section-title" id="contact-title">Pop in,<br><em>say bisou</em></h2>
-
-      <div class="contact-info">
-        <div class="contact-block">
-          <div class="contact-label">where</div>
-          <address class="contact-content">112 6th Ave<br>New York, NY 10013</address>
-        </div>
-        <div class="contact-block">
-          <div class="contact-label">when</div>
-          <div class="hours-table">
-            <span class="day">Tue – Thu</span><span class="time">5pm – midnight</span>
-            <span class="day">Fri – Sat</span><span class="time">5pm – 2am</span>
-            <span class="day">Sun</span><span class="time">5pm – 11pm</span>
-            <span class="day">Mon</span><span class="time">closed (mostly)</span>
-          </div>
-        </div>
-        <div class="contact-block">
-          <div class="contact-label">say hi</div>
-          <div class="contact-content">
-            <a href="mailto:hello@bisounyc.com">hello@bisounyc.com</a><br>
-            <a href="https://www.instagram.com/bisoubarnyc/" target="_blank" rel="noopener">@bisoubarnyc</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a href="https://www.google.com/maps/place/Bisou/data=!4m2!3m1!1s0x0:0x963770b010f868d4" target="_blank" rel="noopener" class="map-link" aria-label="Open Bisou location in Google Maps">
-      <iframe
-        class="map-embed"
-        src="https://www.google.com/maps?q=Bisou+112+6th+Ave+New+York+NY+10013&z=16&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Map showing Bisou at 112 6th Ave, NY"></iframe>
-    </a>
-  </div>
-</section>
-
-</main>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-top">
+<footer class="footer-dark" id="contact">
+  <div class="footer-top footer-top-4col">
     <div class="footer-brand">
       <img src="images/logo.png" alt="Bisou — A Wine Bar" class="footer-logo">
       <p>Not your typical wine bar in Soho. French kiss, New York edge. Good wine, great company, unapologetically red.</p>
     </div>
     <div class="footer-col">
-      <h5>Visit</h5>
+      <h5>Pages</h5>
       <ul>
-        <li><a href="#story">Story</a></li>
+        <li><a href="#story">Home</a></li>
+        <li><a href="#reservation">Reservations</a></li>
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="events.html">Private Events</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Follow</h5>
-      <ul>
-        <li><a href="https://www.instagram.com/bisoubarnyc/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://resy.com/cities/ny/bisou" target="_blank" rel="noopener">Resy</a></li>
-        <li><a href="mailto:hello@bisounyc.com">Email</a></li>
-      </ul>
+      <h5>Opening hours</h5>
+      <div class="footer-hours">
+        <p><strong>Tue – Thu</strong><br>5:00pm – midnight</p>
+        <p><strong>Fri – Sat</strong><br>5:00pm – 2:00am</p>
+        <p><strong>Sun</strong><br>5:00pm – 11:00pm</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Instagram</h5>
+      <div class="footer-instagram" aria-label="Instagram preview">
+        <span class="ig-tile" style="background-image:url('images/menu-pasta.jpg')"></span>
+        <span class="ig-tile" style="background-image:url('images/private-events.webp')"></span>
+        <span class="ig-tile" style="background-image:url('images/hero.jpg')"></span>
+        <span class="ig-tile" style="background-image:url('images/menu-pasta.jpg')"></span>
+        <span class="ig-tile" style="background-image:url('images/private-events.webp')"></span>
+        <span class="ig-tile" style="background-image:url('images/hero.jpg')"></span>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">

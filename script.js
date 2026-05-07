@@ -1,6 +1,21 @@
+// Loader: fade out once page is loaded AND animation has played its full cycle
+(function () {
+  const loader = document.getElementById('bisouLoader');
+  if (!loader) return;
+  const MIN_DISPLAY_MS = 3200; // mark reveal + light sweep before fade out
+  const start = performance.now();
+  const hide = () => {
+    const elapsed = performance.now() - start;
+    const wait = Math.max(0, MIN_DISPLAY_MS - elapsed);
+    setTimeout(() => loader.classList.add('is-hidden'), wait);
+  };
+  if (document.readyState === 'complete') hide();
+  else window.addEventListener('load', hide);
+})();
+
 // Nav scroll effect (only on home page where nav is over hero)
 const nav = document.getElementById('nav');
-if (nav && !nav.classList.contains('solid')) {
+if (nav && !nav.classList.contains('solid') && !nav.classList.contains('dark')) {
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
