@@ -81,7 +81,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body class="home-dark">
@@ -90,6 +90,14 @@
 <div class="bisou-loader" id="bisouLoader" role="status" aria-label="Loading Bisou">
   <img src="images/kiss.png" alt="" class="bisou-loader-mark" aria-hidden="true">
 </div>
+<script>
+  // Hide loader immediately if already shown this session (prevents flash on nav).
+  try {
+    if (sessionStorage.getItem('bisouLoaderSeen') === '1') {
+      document.getElementById('bisouLoader').classList.add('is-hidden');
+    }
+  } catch (e) {}
+</script>
 
 <!-- NAV -->
 <nav id="nav" class="dark" aria-label="Main navigation">

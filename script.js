@@ -1,13 +1,28 @@
-// Loader: fade out once page is loaded AND animation has played its full cycle
+// Loader: fade out once page is loaded AND animation has played its full cycle.
+// Only plays once per session — subsequent navigations skip the intro.
 (function () {
   const loader = document.getElementById('bisouLoader');
   if (!loader) return;
+
+  let alreadySeen = false;
+  try {
+    alreadySeen = sessionStorage.getItem('bisouLoaderSeen') === '1';
+  } catch (e) { /* sessionStorage unavailable — fall through to full animation */ }
+
+  if (alreadySeen) {
+    loader.classList.add('is-hidden');
+    return;
+  }
+
   const MIN_DISPLAY_MS = 3200; // mark reveal + light sweep before fade out
   const start = performance.now();
   const hide = () => {
     const elapsed = performance.now() - start;
     const wait = Math.max(0, MIN_DISPLAY_MS - elapsed);
-    setTimeout(() => loader.classList.add('is-hidden'), wait);
+    setTimeout(() => {
+      loader.classList.add('is-hidden');
+      try { sessionStorage.setItem('bisouLoaderSeen', '1'); } catch (e) {}
+    }, wait);
   };
   if (document.readyState === 'complete') hide();
   else window.addEventListener('load', hide);
