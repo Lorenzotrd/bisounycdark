@@ -979,9 +979,16 @@ footer {
 }
 
 .menu-section-title::before {
-  content: '✦';
-  color: var(--bisou-red);
-  font-size: 1.2rem;
+  content: '';
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  background-image: url('images/xx.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  transform: translateY(0.1em);
 }
 
 .menu-section-sub {
@@ -1982,9 +1989,6 @@ body.home-dark .menu-page {
 
 body.home-dark .menu-section-title {
   color: var(--warm-ivory);
-}
-body.home-dark .menu-section-title::before {
-  color: var(--bisou-red);
 }
 body.home-dark .menu-section-sub {
   color: var(--bisou-red);
