@@ -90,6 +90,14 @@
 <div class="bisou-loader" id="bisouLoader" role="status" aria-label="Loading Bisou">
   <img src="images/kiss.png" alt="" class="bisou-loader-mark" aria-hidden="true">
 </div>
+<script>
+  // Hide loader immediately if already shown this session (prevents flash on nav).
+  try {
+    if (sessionStorage.getItem('bisouLoaderSeen') === '1') {
+      document.getElementById('bisouLoader').classList.add('is-hidden');
+    }
+  } catch (e) {}
+</script>
 
 <!-- NAV -->
 <nav id="nav" class="dark" aria-label="Main navigation">
