@@ -218,7 +218,7 @@ nav.solid .nav-cta:hover {
 
 .hero h1 {
   font-family: var(--display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   line-height: 0.95;
   letter-spacing: -0.025em;
@@ -388,7 +388,7 @@ section.contact {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1;
   letter-spacing: -0.025em;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
@@ -698,7 +698,7 @@ section.contact {
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   line-height: 1;
   letter-spacing: -0.025em;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
   max-width: 1000px;
   margin-left: auto;
@@ -905,7 +905,7 @@ footer {
   font-size: clamp(2.2rem, 4.8vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
@@ -970,7 +970,7 @@ footer {
 .menu-section-title {
   font-family: var(--display);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
   display: flex;
@@ -1020,7 +1020,7 @@ footer {
 .menu-item h4 {
   font-family: var(--display);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
@@ -1071,7 +1071,7 @@ footer {
 .wine-name {
   font-family: var(--display);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
@@ -1155,7 +1155,7 @@ footer {
 .event-type h3 {
   font-family: var(--display);
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   margin-bottom: 0.6rem;
 }
