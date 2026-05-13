@@ -6,7 +6,7 @@
   --midnight: #0E0E10;
   --soft-blue: #49607A;
   --deep-wine: #4A0D0D;
-  --display: 'Playfair Display', serif;
+  --display: 'Cormorant Garamond', serif;
   --body: 'Inter', sans-serif;
   --hand: 'Caveat', cursive;
 }
@@ -1030,11 +1030,11 @@ footer {
 }
 
 .menu-item .price {
-  font-family: var(--display);
-  font-style: italic;
+  font-family: var(--body);
   color: var(--bisou-red);
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
@@ -1076,11 +1076,11 @@ footer {
 }
 
 .wine-price {
-  font-family: var(--display);
-  font-style: italic;
+  font-family: var(--body);
   color: var(--bisou-red);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
